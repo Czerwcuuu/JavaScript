@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <title>Prognoza pogody - przykład</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- section title -->
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <h1>Prognoza pogody</h1>
+            </div>
+        </div>
+        <!-- section city name -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="input-group">
+                    <input id="city-name" type="text" class="form-control" placeholder="Proszę
+wprowadzić nazwę miasta...">
+                    <div class="input-group-append">
+                        <button id="check-weather" class="btn btn-primary" type="button">Sprawdź pogodę</button>
+                    </div>
+                </div>
+                <span id="city-name-validation" class="validation-message">
+                    Proszę wprowadzić nazwę miasta...
+                </span>
+            </div>
+        </div>
+        <!-- section weather forecast list -->
+        <div class="row mt-3">
+            <div class="col-6">
+                <div class="list-group weather">
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div id="loader" class="lds-dual-ring d-none overlay"></div>
+    </div>
+    <script src="vendor/jquery/jquery-3.6.0.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
