@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Przykład 1</title>
+</head>
+<body>
+ <h1>Przykład 1</h1>
+ <p id="text-to-change">Przykładowy tekst, na którym będziemy operować...</p>
+ <button id="btn-to-click">Przycisk</button>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#btn-to-click").mouseenter(function()
+    {
+    $("#text-to-change").text('Tekst o zmodyfikowanej treści...');
+    });
+    </script>
+</body>
+</html>
