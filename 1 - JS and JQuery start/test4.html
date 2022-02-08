@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Przykład 4</title>
+</head>
+
+<body>
+    <h1>Przykład 4</h1>
+    <form>
+        <label for="first-number">
+            Pierwsza liczba całkowita:
+            <input type="text" name="first-number" id="first-number" class="numericvalidation" />
+            <br />
+            17
+            <span id="first-number-validation" class="numeric-validation-text"
+                style="font-size: small; color: red; display: none;"> Proszę
+                wprowadzić liczbę całkowitą...
+            </span>
+        </label>
+        <br /><br />
+        <label for="first-number">
+            Druga liczba całkowita:
+            <input type="text" name="second-number" id="second-number" class="numericvalidation" />
+            <br />
+            <span id="second-number-validation" class="numeric-validation-text"
+                style="font-size: small; color: red; display: none;"> Proszę
+                wprowadzić liczbę całkowitą...
+            </span>
+        </label>
+    </form>
+    <br /><br />
+    <button id="btn-to-click">Dodaj liczby</button>
+    <br /><br />
+    <p class="text" id="calc-result" style="display: none;"></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function validateNumber(value) {
+            if (value === '') {
+                return false;
+            } 
+            if (isNaN(value)) {
+                return false;
+            } 
+            return true;
+        }
+        $(".numeric-validation").change(function () {
+            const number = parseInt($(this).val(), 10);
+            if (!validateNumber(number)) {
+                18
+                $(this).siblings('.numeric-validation-text').show();
+            } else {
+                $(this).siblings('.numeric-validation-text').hide();
+            }
+        });
+        $("#btn-to-click").click(function () {
+            $('#calcresult').hide();
+            let firstNumber = parseInt($('#first-number').val(), 10);
+            let secondNumber = parseInt($('#second-number').val(), 10);
+            if (validateNumber(firstNumber) && validateNumber(secondNumber)) {
+                const result = firstNumber + secondNumber;
+                $('#calc-result').text("Wynik dodawania to: " + result);
+                $('#calc-result').fadeIn();
+            } //if
+        });
+    </script>
+
+</body>
+
+</html>

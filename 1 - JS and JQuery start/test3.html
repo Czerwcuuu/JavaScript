@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<!-- NIE DZIAŁA-->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Przykład 3</title>
+</head>
+<body>
+ <h1>Przykład 3</h1>
+ <p class="text">
+ Poniżej znajduje się tekst ukrywany w momencie przygotowania strony przez
+przeglądarkę.
+ Aby go wyświetlić, proszę kliknąć przycisk.
+ </p>
+ <p class="text" id="text-to-hide">
+ Ukryty tekst.... Ukryty tekst... Ukryty tekst...
+ </p>
+ <button id="btn-to-click">Pokaż ukryty tekst</button>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+ $(document).ready(function() { $('#text-tohide').hide();
+ });
+
+ $("#btn-to-click").click(function(){
+ $("#text-to-hide").show();
+ });
+ </script>
+</body>
+</html>

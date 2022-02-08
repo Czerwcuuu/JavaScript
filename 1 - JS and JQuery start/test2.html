@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Przykład 2</title>
+</head>
+<body>
+ <h1>Przykład 2</h1>
+ <p class="paragraph">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a
+lobortis sem. Aliquam vel scelerisque eros.
+ Mauris convallis lobortis mauris et vestibulum. Ut arcu tortor, efficitur
+eu cursus a, feugiat ac dolor.
+ </p>
+ <p class="paragraph">
+ Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+ac turpis egestas.
+ Vestibulum sollicitudin nibh nec congue mattis. Etiam at nisi tristique,
+malesuada lacus lacinia, volutpat risus.
+ Mauris eu augue vel lacus vehicula posuere at ut lectus. Morbi eleifend
+volutpat auctor.
+ </p>
+ <p class="paragraph">
+ Pellentesque egestas vehicula ex, sed commodo lacus scelerisque sed. Donec
+nec nisl in sem tincidunt molestie.
+ Duis pellentesque dictum massa. Curabitur nec dictum risus. Vestibulum
+convallis bibendum erat vitae bibendum.
+ Ut iaculis quam tellus, sed faucibus lectus dictum ac. Nullam ultricies
+dolor eu vulputate semper.
+ </p>
+ <button id="btn-to-click">Zmień kolor tekstu</button>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+ $("#btn-to-click").click(function(){
+ $(".paragraph").css('color', 'aqua');
+ });
+ </script>
+</body>
+</html>
