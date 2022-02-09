@@ -1,0 +1,22 @@
+<div class="container">
+  <!-- section title -->
+  <div class="row mt-3">
+    <div class="col-12 text-center">
+      <h1>Aplikacja pogodowa</h1>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-6">
+      <app-weather [currentDate]="currentDate" [weatherData]="firstCityWeatherData" (refreshEvent)="onRefresh()">
+      </app-weather>
+    </div>
+    <div class="col-6">
+      <app-weather [weatherData]="secondCityWeatherData" [currentDate]="currentDate" (refreshEvent)="onRefresh()">
+      </app-weather>
+    </div>
+    <div class="col-6">
+      <app-weather [weatherData]="thirdCityWeatherData" [currentDate]="currentDate" (refreshEvent)="onRefresh()">
+      </app-weather>
+    </div>
+  </div>
+</div>
