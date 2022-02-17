@@ -1,0 +1,23 @@
+//SKŁADNIA ES - funkcja strzałkowa
+import React from "react";
+
+const user = (props) => {
+  const date = new Date();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
+
+  return (
+    <div>
+      <h2>
+        I'm {props.username} my role is {props.role}, current hour is{" "}
+        {hour + ":" + minute + ":" + second}
+      </h2>
+      <h2>
+        I'm {props.children}
+      </h2>
+    </div>
+  );
+};
+
+export default user;
