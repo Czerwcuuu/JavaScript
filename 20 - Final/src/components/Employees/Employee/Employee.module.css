@@ -1,0 +1,13 @@
+.employee{
+    margin:auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 3px 4px #bbbbbb;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.employee:hover{
+    background-color: #efefef;
+}
